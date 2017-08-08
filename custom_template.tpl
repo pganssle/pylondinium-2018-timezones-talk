@@ -1,5 +1,4 @@
 {%- extends 'basic.tpl' -%}
-{% from 'mathjax.tpl' import mathjax %}
 
 {%- block any_cell scoped -%}
 {%- if cell.metadata.get('slide_start', False) -%}

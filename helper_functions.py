@@ -7,11 +7,30 @@ from IPython.core.display import HTML, display
 
 
 def print_tzinfo(dt, fmt_str='%Y-%m-%d %H:%M:%S%z'):
-    print(('{}:\n    tzname: {:>5};      UTC Offset: {: >6.2f}h;' +
-           '           DST: {:>8}h').format(dt.strftime(fmt_str),
-                                            str(dt.tzname()),
-                                            dt.utcoffset() / timedelta(hours=1),
-                                            dt.dst() / timedelta(hours=1)))
+    s0 = '{}\n'.format(dt.strftime(fmt_str))
+    s1 = '    tzname: {:>5};'.format(str(dt.tzname()))
+    s1 += ' ' * max((1, 24 - len(s1)))
+
+    utc_off = dt.utcoffset()
+    if utc_off is not None:
+        utc_off = utc_off / timedelta(hours=1)
+        utc_off = '{: >6.2f}h'.format(utc_off)
+    else:
+        utc_off = '     None'
+
+    s2 = 'UTC Offset: {};'.format(utc_off)
+    s2 += ' ' * max((1, 28 - len(s2)))  
+
+    dt_off = dt.dst()
+    if dt_off is not None:
+        dt_off = dt_off / timedelta(hours=1)
+        dt_off = '{:>8}h'.format(dt_off)
+    else:
+        dt_off = '     None'
+
+    s2 += 'DST: {}'.format(dt_off)
+
+    print(s0 + s1 + s2)
 
 
 def print_dt_eq(dt1, dt2, bold=False):

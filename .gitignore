@@ -1,0 +1,5 @@
+__pycache__/
+
+.ipynb_checkpoints/
+
+timezone_troubles.slides.html

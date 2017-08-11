@@ -1,0 +1,11 @@
+files:
+    - custom.css
+
+dirs:
+    - reveal.js
+    - extras
+    - fonts
+    - images
+
+notebook: timezone_troubles.ipynb
+template: custom_template.tpl

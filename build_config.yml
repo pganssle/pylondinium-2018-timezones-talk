@@ -9,3 +9,4 @@ dirs:
 
 notebook: timezone_troubles.ipynb
 template: custom_template.tpl
+slides: timezone_troubles.slides.html

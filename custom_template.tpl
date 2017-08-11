@@ -168,6 +168,9 @@ a.anchor-link {
 <div class="slides">
 {{ super() }}
 </div>
+<div class="header">
+<img src='images/bloomberg-logo-alpha.svg'>
+</div>
 </div>
 {% block post_slides %}
 

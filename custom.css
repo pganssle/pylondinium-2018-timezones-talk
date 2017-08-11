@@ -310,6 +310,11 @@ body {
 .reveal .controls .navigate-down.enabled:hover {
   border-top-color: #0000f1; }
 
+.reveal .controls {
+  top: 0px;
+  right: 0px;
+}
+
 /*********************************************
  * PROGRESS BAR
  *********************************************/
@@ -325,8 +330,12 @@ body {
   /*******************
   * Slides
   *******************/
+.reveal {
+  overflow-y: hidden;
+}
+
 .reveal .slides {
-  height: 95%;
+  height: 98%;
   width: 95%;
   top: auto;
   bottom: auto;
@@ -334,6 +343,16 @@ body {
   right: 5%;
   margin-top: auto !important;
   margin-bottom: auto !important;
+}
+
+.reveal .header {
+  position: absolute; 
+  right: 20px;
+  bottom: 15px;
+  width: 25%;
+  height: 8%;
+  text-align: right;
+  font-size: 10px;
 }
 
 .reveal .slides>section {

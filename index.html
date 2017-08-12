@@ -12210,7 +12210,7 @@ a.anchor-link {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">ET</span><span class="p">(</span><span class="n">tzinfo</span><span class="p">):</span>
@@ -12227,7 +12227,7 @@ a.anchor-link {
             <span class="k">return</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     
     <span class="k">def</span> <span class="nf">tzname</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
-        <span class="k">return</span> <span class="s2">&quot;EST&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isdaylight</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;EDT&quot;</span>
+        <span class="k">return</span> <span class="s2">&quot;EDT&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">isdaylight</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;EST&quot;</span>
 
     <span class="k">def</span> <span class="nf">isdaylight</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dt</span><span class="p">):</span>
         <span class="n">dst_start</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">rd</span><span class="o">.</span><span class="n">relativedelta</span><span class="p">(</span><span class="n">month</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">weekday</span><span class="o">=</span><span class="n">rd</span><span class="o">.</span><span class="n">SU</span><span class="p">(</span><span class="o">+</span><span class="mi">2</span><span class="p">),</span> <span class="n">hour</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>

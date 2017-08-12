@@ -364,6 +364,11 @@ body {
   min-height: 100% !important;
 }
 
+.reveal ul ul
+{
+  padding: 0px 25px;
+}
+
 div.prompt {
   display: none;
   }

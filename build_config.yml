@@ -1,5 +1,5 @@
 files:
-    - custom.css
+    - css/custom.css
 
 dirs:
     - reveal.js

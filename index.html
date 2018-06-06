@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>timezone_troubles slides</title>
+<title>Slides</title>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="reveal.js/css/reveal.css">
@@ -11825,7 +11825,7 @@ a.anchor-link {
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="css/custom.css">
 
 </head>
 
@@ -11836,22 +11836,21 @@ a.anchor-link {
 <div class="reveal">
 <div class="slides">
 <section><section><div style='font-size: 72px; text-align: center; height: 95%; top: 2.5%'>
-    <b>Time Zone Troubles</b>
-    <b><div style='font-size: 64px; text-align: center'>Dealing with Ambiguous and Imaginary Datetimes</div></b>
+    <b>Working with Time Zones</b>
+    <b><div style='font-size: 64px; text-align: center'>Everything You Wish You Didn't Need to Know</div></b>
     <br/>
     <br/>
     <span style='font-size: 50px'>
         Paul Ganssle<br/>
-        <img src="images/bloomberg-logo-black.svg" style="border: none; box-shadow: none; height: 45px"><br/>
-        <div style="text-align:center"><img src="images/pganssle-logos.svg" style="border: 0px; box-shadow: none; height: 40px; display:inline"></div>
+        <img src="images/bloomberg-logo-black.svg" style="border: none; box-shadow: none; height: 5rem"><br/>
+        <div style="text-align:center"><img src="images/dateutil-logo.png" style="border: 0px; box-shadow: none; height: 40px; display:inline"></div>
         </span>
 </div>
 <br/><br/>
 <div style="text-align: center; font-size: 20px">
-<i><a href="https://github.com/pganssle/pybay-2017-timezones-talk">Github repo for this talk</a></i>
+<i><a href="https://github.com/pganssle/pylondinium-2018-timezones-talk">Github repo for this talk</a></i>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11859,8 +11858,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11872,8 +11870,7 @@ a.anchor-link {
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11885,8 +11882,7 @@ a.anchor-link {
 </div>
 </div>
 </div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11902,8 +11898,7 @@ a.anchor-link {
 </div>
 </div>
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11911,8 +11906,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11926,8 +11920,7 @@ a.anchor-link {
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11949,8 +11942,7 @@ a.anchor-link {
 </div>
 </div>
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11958,8 +11950,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11977,8 +11968,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11986,13 +11976,12 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Missing-days">Missing days<a class="anchor-link" href="#Missing-days">&#182;</a></h3><ul>
-<li>Christmas Island (Kiritimati), January 2, 1995  (UTC-10 -&gt; UTC+14)</li>
+<li>Christmas Island (Kiritimati), December 31, 1994  (UTC-10 -&gt; UTC+14)</li>
 </ul>
 
 </div>
@@ -12003,7 +11992,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_before</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">1995</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;Pacific/Kiritimati&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_before</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">1994</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">59</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;Pacific/Kiritimati&#39;</span><span class="p">))</span>
 <span class="n">dt_after</span> <span class="o">=</span> <span class="n">add_absolute</span><span class="p">(</span><span class="n">dt_before</span><span class="p">,</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">dt_before</span><span class="p">)</span>
@@ -12019,11 +12008,13 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
 
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1995-01-01 23:59:00-10:00
-1995-01-03 00:01:00+14:00
+<pre>1994-12-30 23:59:00-10:00
+1995-01-01 00:01:00+14:00
 </pre>
 </div>
 </div>
@@ -12032,8 +12023,7 @@ a.anchor-link {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12042,21 +12032,11 @@ a.anchor-link {
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Double-days">Double days<a class="anchor-link" href="#Double-days">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
+<h3 id="Double-days">Double days<a class="anchor-link" href="#Double-days">&#182;</a></h3><ul>
 <li>Kwajalein Atoll, 1969</li>
 </ul>
 
@@ -12084,11 +12064,13 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>1969-09-30 11:59:00+11:00
-1969-09-30 12:01:00-12:00
+1969-09-30 12:01:00+11:00
 </pre>
 </div>
 </div>
@@ -12097,8 +12079,25 @@ a.anchor-link {
 </div>
 
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Asia/Shanghai"><code>Asia/Shanghai</code><a class="anchor-link" href="#Asia/Shanghai">&#182;</a></h3><p><img src="images/china_shanghai.png" alt="Asia/Shanghai time zone map"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Asia/Urumqi"><code>Asia/Urumqi</code><a class="anchor-link" href="#Asia/Urumqi">&#182;</a></h3><p><img src="images/china_overlay.png" alt="Asia/Shanghai time zone map"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12130,7 +12129,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2017-03-09 17:00:00-05:00
@@ -12164,7 +12165,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2017-03-09 22:00:00+00:00
@@ -12180,8 +12183,7 @@ a.anchor-link {
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12199,8 +12201,7 @@ a.anchor-link {
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12248,7 +12249,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2017-11-04 12:00:00-04:00
@@ -12283,7 +12286,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2017-11-05 01:30:00-04:00
@@ -12296,8 +12301,7 @@ a.anchor-link {
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12327,7 +12331,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-10-31 00:30:00-04:00 | EDT |  Unambiguous
@@ -12342,8 +12348,7 @@ a.anchor-link {
 </div>
 
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12356,8 +12361,7 @@ a.anchor-link {
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12384,7 +12388,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-10-31 01:30:00-0400
@@ -12399,8 +12405,7 @@ a.anchor-link {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12409,8 +12414,7 @@ a.anchor-link {
 </div>
 </div>
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12433,8 +12437,7 @@ a.anchor-link {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12463,7 +12466,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12473,7 +12478,9 @@ a.anchor-link {
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12505,7 +12512,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12515,7 +12524,9 @@ a.anchor-link {
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12525,7 +12536,9 @@ a.anchor-link {
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12538,8 +12551,7 @@ a.anchor-link {
 </div>
 
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12547,8 +12559,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12577,7 +12588,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12587,7 +12600,9 @@ a.anchor-link {
 </div>
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12600,8 +12615,7 @@ a.anchor-link {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12627,7 +12641,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 
 <div class="output_html rendered_html output_subarea ">
@@ -12640,8 +12656,7 @@ a.anchor-link {
 </div>
 
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12659,7 +12674,7 @@ a.anchor-link {
 <span class="n">x</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2007</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">LON</span><span class="p">)</span>
 <span class="n">ts</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">timestamp</span><span class="p">()</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">LON</span><span class="p">)</span>
-<span class="n">z</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;Europe/London&#39;</span><span class="p">))</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="n">ts</span><span class="p">,</span> <span class="n">gettz</span><span class="o">.</span><span class="n">nocache</span><span class="p">(</span><span class="s1">&#39;Europe/London&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12684,7 +12699,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[22]:</div>
+
 
 
 
@@ -12715,7 +12732,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[23]:</div>
+
 
 
 
@@ -12746,7 +12765,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[24]:</div>
+
 
 
 
@@ -12760,8 +12781,7 @@ a.anchor-link {
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12778,7 +12798,7 @@ a.anchor-link {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt1</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">UTC</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">dt</span> <span class="o">=</span> <span class="p">(</span><span class="n">dt1</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="n">i</span><span class="p">))</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">NYC</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> | </span><span class="si">{}</span><span class="s1"> &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">tzname</span><span class="p">()))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt}</span><span class="s1"> | {dt.tzname()} &#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12790,7 +12810,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-04-04 01:30:00-05:00 | EST 
@@ -12821,7 +12843,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2007-03-25 01:00:00+01:00
@@ -12851,7 +12875,9 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2007-03-25 00:00:00+00:00
@@ -12864,8 +12890,7 @@ a.anchor-link {
 </div>
 
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12878,9 +12903,9 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x (LON):              </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x (UTC):              </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">UTC</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x (LON-&gt;UTC-&gt;LON):    </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">UTC</span><span class="p">)</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">LON</span><span class="p">)))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;x (LON):              </span><span class="si">{x}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;x (UTC):              {x.astimezone(UTC)}&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;x (LON-&gt;UTC-&gt;LON):    {x.astimezone(LON).astimezone(LON)}&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12892,12 +12917,14 @@ a.anchor-link {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>x (LON):              2007-03-25 01:00:00+01:00
 x (UTC):              2007-03-25 00:00:00+00:00
-x (LON-&gt;UTC-&gt;LON):    2007-03-25 00:00:00+00:00
+x (LON-&gt;UTC-&gt;LON):    2007-03-25 01:00:00+01:00
 </pre>
 </div>
 </div>
@@ -12911,8 +12938,8 @@ x (LON-&gt;UTC-&gt;LON):    2007-03-25 00:00:00+00:00
 <div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;y: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">y</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;z: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;y: </span><span class="si">{y}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;z: </span><span class="si">{z}</span><span class="s1">&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12924,7 +12951,9 @@ x (LON-&gt;UTC-&gt;LON):    2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>y: 2007-03-25 00:00:00+00:00
@@ -12954,7 +12983,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[32]:</div>
+
 
 
 
@@ -12985,12 +13016,14 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[33]:</div>
 
 
 
+
 <div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
+<pre>True</pre>
 </div>
 
 </div>
@@ -12999,8 +13032,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13008,8 +13040,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13036,7 +13067,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2017-08-11 14:00:00-0700
@@ -13049,8 +13082,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13076,7 +13108,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2017-08-11 14:00:00-0400
@@ -13089,8 +13123,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13116,7 +13149,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2017-08-11 17:00:00-0400
@@ -13129,8 +13164,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13156,7 +13190,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2017-08-11 17:00:00-0400
@@ -13169,8 +13205,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13196,7 +13231,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2017-08-11 14:00:00-0456
@@ -13209,8 +13246,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13241,7 +13277,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2017-08-11 14:00:00-0700
@@ -13254,8 +13292,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13284,7 +13321,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2018-02-07 14:00:00-0700
@@ -13314,7 +13353,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2018-02-07 13:00:00-0800
@@ -13327,8 +13368,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13336,8 +13376,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13368,7 +13407,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>datetime.datetime(2004, 10, 31, 1, 30, fold=1, tzinfo=tzfile(&#39;/usr/share/zoneinfo/US/Eastern&#39;))
@@ -13400,7 +13441,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>datetime.datetime(2004, 10, 31, 1, 30, tzinfo=&lt;DstTzInfo &#39;US/Eastern&#39; EST-1 day, 19:00:00 STD&gt;)
@@ -13414,8 +13457,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13423,8 +13465,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13451,7 +13492,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[44]:</div>
+
 
 
 
@@ -13465,8 +13508,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13486,8 +13528,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 </div>
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13513,7 +13554,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[45]:</div>
+
 
 
 
@@ -13544,7 +13587,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[46]:</div>
+
 
 
 
@@ -13560,14 +13605,14 @@ z: 2007-03-25 00:00:00+00:00
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_0</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">NYC</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">dt_i</span> <span class="o">=</span> <span class="n">dt_0</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
     <span class="n">dt_i</span> <span class="o">=</span> <span class="n">tz</span><span class="o">.</span><span class="n">enfold</span><span class="p">(</span><span class="n">dt_i</span><span class="p">,</span> <span class="n">tz</span><span class="o">.</span><span class="n">datetime_ambiguous</span><span class="p">(</span><span class="n">dt_i</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> (fold=</span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt_i</span><span class="p">,</span> <span class="n">dt_i</span><span class="o">.</span><span class="n">fold</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt_i}</span><span class="s1"> (fold=</span><span class="si">{dt_i.fold}</span><span class="s1">)&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13579,7 +13624,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-10-31 00:30:00-04:00 (fold=0)
@@ -13593,8 +13640,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13610,7 +13656,7 @@ z: 2007-03-25 00:00:00+00:00
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">dt_i</span> <span class="o">=</span> <span class="n">tz</span><span class="o">.</span><span class="n">enfold</span><span class="p">(</span><span class="n">dt_0</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="n">i</span><span class="p">),</span> <span class="n">fold</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> (fold=</span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt_i</span><span class="p">,</span> <span class="n">dt_i</span><span class="o">.</span><span class="n">fold</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt_i}</span><span class="s1"> (fold=</span><span class="si">{dt_i.fold}</span><span class="s1">)&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13622,7 +13668,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-10-31 00:30:00-04:00 (fold=1)
@@ -13636,8 +13684,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13664,7 +13711,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-10-31 01:30:00-0500
@@ -13677,8 +13726,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13705,7 +13753,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-10-31 01:30:00-0400
@@ -13718,8 +13768,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13737,9 +13786,9 @@ z: 2007-03-25 00:00:00+00:00
     <span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">is_dst</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> | </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="s2">&quot;Unambiguous&quot;</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt}</span><span class="s1"> | Unambiguous&#39;</span><span class="p">)</span>
     <span class="k">except</span> <span class="n">pytz</span><span class="o">.</span><span class="n">AmbiguousTimeError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> | </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="s2">&quot;Ambiguous&quot;</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt}</span><span class="s1"> | Ambiguous&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -13751,7 +13800,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-10-31 00:30:00 | Unambiguous
@@ -13764,8 +13815,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13773,8 +13823,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13782,8 +13831,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13800,7 +13848,7 @@ z: 2007-03-25 00:00:00+00:00
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_0</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">NYC</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">dt</span> <span class="o">=</span> <span class="n">dt_0</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> (</span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="s1">&#39;Exists&#39;</span> <span class="k">if</span> <span class="n">tz</span><span class="o">.</span><span class="n">datetime_exists</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;Imaginary&#39;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt}</span><span class="s1"> ({{}})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Exists&#39;</span> <span class="k">if</span> <span class="n">tz</span><span class="o">.</span><span class="n">datetime_exists</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;Imaginary&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -13812,7 +13860,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-04-04 01:30:00-05:00 (Exists)
@@ -13826,8 +13876,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13860,7 +13909,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-04-04 03:30:00-04:00
@@ -13872,8 +13923,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13881,8 +13931,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13909,7 +13958,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-04-04 02:30:00-04:00
@@ -13922,8 +13973,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13953,7 +14003,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-04-04 01:30:00-05:00
@@ -13966,8 +14018,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13975,8 +14026,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13998,7 +14048,7 @@ z: 2007-03-25 00:00:00+00:00
     <span class="k">except</span> <span class="n">pytz</span><span class="o">.</span><span class="n">NonExistentTimeError</span><span class="p">:</span>
         <span class="n">exists</span> <span class="o">=</span> <span class="kc">False</span>
 
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> (</span><span class="si">{}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="s1">&#39;Exists&#39;</span> <span class="k">if</span> <span class="n">exists</span> <span class="k">else</span> <span class="s1">&#39;Imaginary&#39;</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt}</span><span class="s1"> ({{}})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Exists&#39;</span> <span class="k">if</span> <span class="n">exists</span> <span class="k">else</span> <span class="s1">&#39;Imaginary&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -14010,7 +14060,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-04-04 01:30:00-05:00 (Exists)
@@ -14024,8 +14076,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14033,8 +14084,7 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14045,14 +14095,14 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[78]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_pytz_real</span> <span class="o">=</span> <span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
 <span class="n">dt_pytz_imag</span> <span class="o">=</span> <span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Real:      </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tz</span><span class="o">.</span><span class="n">datetime_exists</span><span class="p">(</span><span class="n">dt_pytz_real</span><span class="p">)))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Imaginary: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tz</span><span class="o">.</span><span class="n">datetime_exists</span><span class="p">(</span><span class="n">dt_pytz_imag</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Real:      {tz.datetime_exists(dt_pytz_real)}&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Imaginary: {tz.datetime_exists(dt_pytz_imag)}&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -14064,7 +14114,9 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Real:      True
@@ -14077,8 +14129,7 @@ Imaginary: False
 </div>
 
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14105,7 +14156,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2004-04-04 04:30:00-05:00: Imaginary
@@ -14117,8 +14170,7 @@ Imaginary: False
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14126,8 +14178,7 @@ Imaginary: False
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14154,7 +14205,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2014-12-19 22:30:00+0000
@@ -14167,8 +14220,7 @@ Imaginary: False
 </div>
 
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14202,7 +14254,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2016-07-17 21:15:00+0900
@@ -14219,8 +14273,7 @@ Imaginary: False
 </div>
 
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14228,8 +14281,7 @@ Imaginary: False
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14244,7 +14296,7 @@ Imaginary: False
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">timezone</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>     <span class="c1"># Equivalent to pytz.UTC or dateutil.tz.tzutc()</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>     <span class="c1"># Equivalent to pytz.UTC or dateutil.tz.UTC</span>
 <span class="n">print_tzinfo</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
 </pre></div>
 
@@ -14257,7 +14309,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2014-12-19 22:30:00+0000
@@ -14280,7 +14334,7 @@ Imaginary: False
                <span class="s1">&#39;IST&#39;</span><span class="p">)</span>  
 <span class="n">EST</span> <span class="o">=</span> <span class="n">timezone</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=-</span><span class="mi">5</span><span class="p">))</span>                <span class="c1"># Without a name, it&#39;s UTC-hh:mm</span>
 
-<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">tzutc</span><span class="p">())</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">tz</span><span class="o">.</span><span class="n">UTC</span><span class="p">)</span>
 <span class="n">print_tzinfo</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">JST</span><span class="p">));</span> <span class="nb">print</span><span class="p">()</span>
 <span class="n">print_tzinfo</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">IST</span><span class="p">));</span> <span class="nb">print</span><span class="p">()</span>
 <span class="n">print_tzinfo</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">EST</span><span class="p">))</span>
@@ -14295,7 +14349,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2016-07-17 21:15:00+0900
@@ -14314,8 +14370,7 @@ Imaginary: False
 </div>
 
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14323,8 +14378,7 @@ Imaginary: False
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14353,11 +14407,13 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
 
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2016-07-17 08:15:00-0400
-    tzname:   EDT;      UTC Offset:  -4.00h;        DST:      1.0h
+<pre>2016-07-17 13:15:00+0100
+    tzname:   BST;      UTC Offset:   1.00h;        DST:      1.0h
 </pre>
 </div>
 </div>
@@ -14384,7 +14440,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2016-07-17 12:15:00+0000
@@ -14415,7 +14473,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2017-01-13 04:15:00-0800
@@ -14428,8 +14488,7 @@ Imaginary: False
 </div>
 
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14437,8 +14496,7 @@ Imaginary: False
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14463,8 +14521,7 @@ Imaginary: False
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14472,8 +14529,7 @@ Imaginary: False
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14502,7 +14558,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[67]:</div>
+
 
 
 
@@ -14516,8 +14574,7 @@ Imaginary: False
 </div>
 
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14543,7 +14600,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>2017-08-12 14:00:00-0400
@@ -14573,7 +14632,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>1944-01-06 12:15:00-0400
@@ -14603,7 +14664,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>1901-09-06 16:07:00-0456
@@ -14616,8 +14679,7 @@ Imaginary: False
 </div>
 
 </div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14625,8 +14687,7 @@ Imaginary: False
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14652,7 +14713,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt output_prompt">Out[71]:</div>
+
 
 
 
@@ -14685,7 +14748,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>tzfile(&#39;/usr/share/zoneinfo/CST6CDT&#39;)
@@ -14717,7 +14782,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>tzlocal()
@@ -14747,7 +14814,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>tzfile(&#39;/usr/share/zoneinfo/Pacific/Kiritimati&#39;)
@@ -14777,7 +14846,9 @@ Imaginary: False
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>tzstr(&#39;AEST-10AEDT-11,M10.1.0/2,M4.1.0/3&#39;)
@@ -14789,8 +14860,7 @@ Imaginary: False
 </div>
 
 </div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14798,8 +14868,7 @@ Imaginary: False
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14807,8 +14876,7 @@ Imaginary: False
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14820,8 +14888,7 @@ Imaginary: False
 </div>
 </div>
 </div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14833,29 +14900,8 @@ Imaginary: False
 
 </div>
 </div>
-</div></div></section></section><section><section><div style="text-align:center">
-<img src="images/bloomberg-logo-black.svg" style="border: none; box-shadow: none; width: 35%">
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>100+ open Python jobs</li>
-<li>Offices in New York, London, San Francisco
-<br/><br/></li>
-</ul>
-<h3 id="Notable-SF-Jobs:">Notable SF Jobs:<a class="anchor-link" href="#Notable-SF-Jobs:">&#182;</a></h3><ul>
-<li><a href="https://careers.bloomberg.com/job/detail/59288">Senior Python Engineer</a> - Writing financial libraries for clients to use</li>
-<li><a href="https://careers.bloomberg.com/job/detail/59719">Senior Infrastructure Engineer</a> - scaling distributed system to run data science platform</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14867,8 +14913,7 @@ Imaginary: False
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14887,8 +14932,7 @@ Imaginary: False
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -14901,8 +14945,35 @@ Imaginary: False
 67AB CD54 FCE3 D964 BEFB
 </div></section></section>
 </div>
-<div class="header">
-<img src='images/bloomberg-logo-alpha.svg'>
+<div class="footer">
+
+<style>
+div.sbcontainer {
+    position: fixed;
+    top: 5em;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+}
+
+img.sbitem {
+    opacity: 0.5;
+    width: 3.5rem;
+}
+
+</style>
+
+<div class="sbcontainer">
+    <img src="images/pganssle-logos-rotated.svg"
+         class="sbitem" />
+    <img src="images/ganssleio_rotated.svg"
+         class="sbitem" />
+    <img src="images/bloomberg-logo-black-rotated.svg"
+         style="width: 4em;
+                margin-bottom: 0.5em;"
+        class="sbitem">
 </div>
 </div>
 

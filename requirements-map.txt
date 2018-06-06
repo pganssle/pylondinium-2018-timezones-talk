@@ -1,0 +1,3 @@
+geopandas
+requests>=2.18
+matplotlib

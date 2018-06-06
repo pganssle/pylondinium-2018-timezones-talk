@@ -43,7 +43,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>{{resources['metadata']['name']}} slides</title>
+<title>Slides</title>
 
 <!-- General and theme style sheets -->
 <link rel="stylesheet" href="{{resources.reveal.url_prefix}}/css/reveal.css">
@@ -153,7 +153,7 @@ a.anchor-link {
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="custom.css">
+<link rel="stylesheet" href="css/custom.css">
 
 </head>
 {% endblock header%}
@@ -168,9 +168,19 @@ a.anchor-link {
 <div class="slides">
 {{ super() }}
 </div>
-<div class="header">
-<img src='images/bloomberg-logo-alpha.svg'>
-</div>
+<div class="footer">
+{#
+<span id="website" style="text-decoration: underline">
+    https://ganssle.io
+</span>
+<span id="twitter" style="font-weight: bold">
+    @pganssle
+</span>
+<span id="logo" style="margin-bottom: -1em">
+    <img src='images/bloomberg-logo-alpha.svg'>
+</span>
+#}
+{% include 'footer.tpl' %}
 </div>
 {% block post_slides %}
 
@@ -210,6 +220,8 @@ Reveal.addEventListener('slidechanged', update_scroll);
 </body>
 {% endblock post_slides %}
 {% endblock body %}
+
+
 
 {% block footer %}
 </html>

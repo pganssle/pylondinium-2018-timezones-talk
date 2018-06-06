@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="4.6820827mm"
+   height="28.421997mm"
+   viewBox="0 0 4.6820826 28.421997"
+   version="1.1"
+   id="svg7784"
+   inkscape:version="0.92.2 2405546, 2018-03-11"
+   sodipodi:docname="ganssleio_rotated.svg">
+  <defs
+     id="defs7778">
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect5420"
+       is_visible="true"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="7.919596"
+     inkscape:cx="3.3528111"
+     inkscape:cy="33.97399"
+     inkscape:document-units="mm"
+     inkscape:current-layer="text5054"
+     showgrid="false"
+     fit-margin-top="0.2"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0.2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1028"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7781">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-108.57219,-147.26917)">
+    <g
+       id="text5054"
+       style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:4.04292917px;line-height:125%;font-family:'ITC Avant Garde Gothic Std';-inkscape-font-specification:'ITC Avant Garde Gothic Std Light';font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:0px;word-spacing:0px;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.23324595px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       aria-label="@pganssle"
+       transform="matrix(0,-1.2078369,1.2078369,0,-90.364341,303.97388)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.76222038px;line-height:125%;font-family:'Frutiger Next Pro';-inkscape-font-specification:'Frutiger Next Pro';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.2190555px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="111.01616"
+         y="167.653"
+         id="text1061"><tspan
+           sodipodi:role="line"
+           id="tspan1059"
+           x="111.01616"
+           y="167.653"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.08905029px;font-family:'Frutiger Next Pro';-inkscape-font-specification:'Frutiger Next Pro Bold';stroke-width:0.2190555px">ganssle.io</tspan></text>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.2190555px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 129.43103,168.11709 c -5.29205,0 -10.58432,0 -15.8768,0"
+         id="path5418"
+         inkscape:connector-curvature="0"
+         inkscape:path-effect="#path-effect5420"
+         inkscape:original-d="m 129.43103,168.11709 c -5.29205,2.2e-4 -10.58432,2.2e-4 -15.8768,0" />
+      <path
+         inkscape:connector-curvature="0"
+         d="m 108.78499,167.16442 c -0.4414,0.44095 -1.1491,0.4349 -1.58375,0.003 -8.6e-4,-0.002 -0.003,-0.002 -0.003,-0.003 l -0.49596,-0.49596 c -0.43743,-0.43744 -0.43738,-1.14912 1e-5,-1.58648 0.43735,-0.43743 1.14912,-0.43744 1.58648,0 l 0.27384,0.27385 c 0.0726,0.0726 0.0244,0.19771 -0.0783,0.20144 -0.13079,0.005 -0.26218,0.0283 -0.3891,0.0715 -0.0431,0.0142 -0.0905,0.004 -0.1226,-0.0279 l -0.0966,-0.0966 c -0.20684,-0.20685 -0.54364,-0.21333 -0.75251,-0.009 -0.21091,0.20683 -0.21217,0.54679 -0.003,0.7552 l 0.4959,0.49596 c 0.20805,0.20806 0.54435,0.2072 0.75153,1e-5 0.0272,-0.0273 0.0485,-0.0548 0.0633,-0.0763 a 0.11835882,0.11835882 0 0 1 0.093,-0.0513 c 0.078,-0.003 0.15836,0.0247 0.21999,0.0863 l 0.15539,0.15538 c 0.0407,0.0407 0.0458,0.10465 0.0128,0.15191 a 1.1253719,1.1253719 0 0 1 -0.12693,0.15147 z m 1.0402,1.04015 c 0.43738,-0.43737 0.43744,-1.14905 10e-6,-1.58649 l -0.49597,-0.49596 c -8.7e-4,-0.002 -0.003,-0.002 -0.003,-0.003 -0.43465,-0.43224 -1.14234,-0.4383 -1.58375,0.003 a 1.1251652,1.1251652 0 0 0 -0.12691,0.15146 c -0.0329,0.0472 -0.028,0.11118 0.0128,0.15192 l 0.15538,0.15537 c 0.0615,0.0616 0.14201,0.0893 0.21999,0.0863 a 0.11835882,0.11835882 0 0 0 0.093,-0.0513 c 0.0148,-0.0215 0.036,-0.049 0.0633,-0.0763 0.20719,-0.20719 0.54348,-0.20808 0.75154,0 l 0.4959,0.49596 c 0.2084,0.20841 0.20714,0.54837 -0.003,0.7552 -0.20886,0.20481 -0.54565,0.19834 -0.7525,-0.009 l -0.0966,-0.0966 c -0.0322,-0.0322 -0.0797,-0.0426 -0.1226,-0.0279 -0.12689,0.0433 -0.25836,0.0666 -0.38911,0.0715 -0.10262,0.003 -0.15089,0.12882 -0.0783,0.20143 l 0.27385,0.27386 c 0.43735,0.43744 1.14912,0.43744 1.58648,10e-6 z"
+         id="path22528"
+         style="stroke-width:0.00172144px" />
+    </g>
+  </g>
+</svg>

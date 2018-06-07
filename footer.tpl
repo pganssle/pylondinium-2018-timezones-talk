@@ -11,18 +11,19 @@ div.sbcontainer {
 
 img.sbitem {
     opacity: 0.5;
-    width: 3.5rem;
 }
 
 </style>
 
 <div class="sbcontainer">
     <img src="images/pganssle-logos-rotated.svg"
+         style="width: 1em;"
          class="sbitem" />
     <img src="images/ganssleio_rotated.svg"
+         style="width: 1em;"
          class="sbitem" />
     <img src="images/bloomberg-logo-black-rotated.svg"
-         style="width: 4em;
+         style="width: 3em;
                 margin-bottom: 0.5em;"
         class="sbitem">
 </div>

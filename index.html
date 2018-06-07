@@ -13025,7 +13025,7 @@ z: 2007-03-25 00:00:00+00:00
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
+<pre>False</pre>
 </div>
 
 </div>
@@ -13369,6 +13369,15 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>There is more detail on this on my blog post, <a href="https://blog.ganssle.io/articles/2018/03/pytz-fastest-footgun.html">"<code>pytz</code>: The Fastest Footgun in the West"</a> (<a href="https://blog.ganssle.io/articles/2018/03/pytz-fastest-footgun.html">https://blog.ganssle.io/articles/2018/03/pytz-fastest-footgun.html</a>)</p>
+
+</div>
+</div>
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -13607,7 +13616,7 @@ z: 2007-03-25 00:00:00+00:00
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_0</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">NYC</span><span class="p">)</span>
@@ -13685,137 +13694,6 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 </div>
 
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="pytz"><code>pytz</code><a class="anchor-link" href="#pytz">&#182;</a></h2><p>When localizing times, <code>pytz</code> defaults to <em>standard time</em>:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_pytz</span> <span class="o">=</span> <span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
-<span class="n">print_tzinfo</span><span class="p">(</span><span class="n">dt_pytz</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2004-10-31 01:30:00-0500
-    tzname:   EST;      UTC Offset:  -5.00h;        DST:      0.0h
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>To get a time zone in <em>daylight time</em>, pass <code>is_dst=True</code> to <code>localize</code>:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_pytz</span> <span class="o">=</span> <span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="n">is_dst</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">print_tzinfo</span><span class="p">(</span><span class="n">dt_pytz</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2004-10-31 01:30:00-0400
-    tzname:   EDT;      UTC Offset:  -4.00h;        DST:      1.0h
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If <code>is_dst=None</code> is passed to <code>localize</code>, <code>pytz</code> raises an <code>AmbiguousTimeError</code>:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">hour</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">):</span>
-    <span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">dt</span><span class="p">,</span> <span class="n">is_dst</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt}</span><span class="s1"> | Unambiguous&#39;</span><span class="p">)</span>
-    <span class="k">except</span> <span class="n">pytz</span><span class="o">.</span><span class="n">AmbiguousTimeError</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt}</span><span class="s1"> | Ambiguous&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2004-10-31 00:30:00 | Unambiguous
-2004-10-31 01:30:00 | Ambiguous
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
@@ -13877,12 +13755,20 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 </div>
 
-</div><div class="fragment">
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Generally for imaginary datetimes, you either want to skip over them or "slide forward":</p>
+<h2 id="tz.resolve_imaginary"><code>tz.resolve_imaginary</code><a class="anchor-link" href="#tz.resolve_imaginary">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Generally for imaginary datetimes, you want to "skip forward" to what the the time would be if the transition had not happened. In <code>dateutil</code> you can use the <code>tz.resolve_imaginary</code> function to do this automatically:</p>
 
 </div>
 </div>
@@ -13890,6 +13776,104 @@ z: 2007-03-25 00:00:00+00:00
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">NYC</span><span class="p">)</span>
+<span class="n">dt_imag</span> <span class="o">=</span> <span class="n">dt</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">tz</span><span class="o">.</span><span class="n">resolve_imaginary</span><span class="p">(</span><span class="n">dt_imag</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2004-04-04 03:30:00-04:00
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">1994</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;Pacific/Kiritimati&#39;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt}</span><span class="s1"> ({{}})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Exists&#39;</span> <span class="k">if</span> <span class="n">tz</span><span class="o">.</span><span class="n">datetime_exists</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;Imaginary&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1994-12-31 09:00:00-10:00 (Imaginary)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tz</span><span class="o">.</span><span class="n">resolve_imaginary</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[56]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>datetime.datetime(1995, 1, 1, 9, 0, tzinfo=tzfile(&#39;/usr/share/zoneinfo/Pacific/Kiritimati&#39;))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">resolve_imaginary</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>          <span class="c1"># This is a planned feature in dateutil 2.7.0</span>
@@ -13937,167 +13921,14 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>When using <code>localize</code> on an imaginary datetime, <code>pytz</code> will create an imaginary time and use <code>is_dst</code> to decide what offset to assign it:</p>
+<p><code>dateutil.tz.datetime_exists()</code>  and <code>dateutil.tz.resolve_imaginary()</code> work with <code>pytz</code> zones, too</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="n">is_dst</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="n">is_dst</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2004-04-04 02:30:00-04:00
-2004-04-04 02:30:00-05:00
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If you have a non-existent date, <code>normalize()</code> will slide it forward or backwards, depending on the value passed to <code>is_dst</code> (default is <code>False</code>):</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_imag_dst</span> <span class="o">=</span> <span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="n">is_dst</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">dt_imag_std</span> <span class="o">=</span> <span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span> <span class="n">is_dst</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">NYC_pytz</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">dt_imag_dst</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">NYC_pytz</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">dt_imag_std</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2004-04-04 01:30:00-05:00
-2004-04-04 03:30:00-04:00
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="pytz"><code>pytz</code><a class="anchor-link" href="#pytz">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>If you pass <code>is_dst=None</code>, <code>pytz</code> will throw a <code>NonExistentTimeError</code>:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_0</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">dt</span> <span class="o">=</span> <span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">dt_0</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="n">i</span><span class="p">),</span> <span class="n">is_dst</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
-        <span class="n">exists</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="k">except</span> <span class="n">pytz</span><span class="o">.</span><span class="n">NonExistentTimeError</span><span class="p">:</span>
-        <span class="n">exists</span> <span class="o">=</span> <span class="kc">False</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt}</span><span class="s1"> ({{}})&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;Exists&#39;</span> <span class="k">if</span> <span class="n">exists</span> <span class="k">else</span> <span class="s1">&#39;Imaginary&#39;</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2004-04-04 01:30:00-05:00 (Exists)
-2004-04-04 01:30:00-05:00 (Imaginary)
-2004-04-04 03:30:00-04:00 (Exists)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="pytz"><code>pytz</code><a class="anchor-link" href="#pytz">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>dateutil.tz.datetime_exists()</code> works with <code>pytz</code> zones, too</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_pytz_real</span> <span class="o">=</span> <span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
@@ -14130,19 +13961,58 @@ Imaginary: False
 </div>
 </div>
 
-</div><div class="fragment">
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt_pytz_imag}</span><span class="s1"> -&gt; {tz.resolve_imaginary(dt_pytz_imag)}&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2004-04-04 02:30:00-05:00 -&gt; 2004-04-04 02:30:00-05:00
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>And will detect non-normalized <code>datetimes</code>:</p>
+<h2 id="pytz"><code>pytz</code><a class="anchor-link" href="#pytz">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>tz.datetime_exists</code> will detect non-normalized <code>datetimes</code>:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_nn</span> <span class="o">=</span> <span class="n">dt_pytz_real</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>   <span class="c1"># Needs to be normalized to DST</span>
@@ -14171,7 +14041,48 @@ Imaginary: False
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But <code>resolve_imaginary</code> currently only works for standard imaginary datetimes:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_n</span> <span class="o">=</span> <span class="n">tz</span><span class="o">.</span><span class="n">resolve_imaginary</span><span class="p">(</span><span class="n">dt_nn</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt_nn}</span><span class="s1"> -&gt; </span><span class="si">{dt_n}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2004-04-04 04:30:00-05:00 -&gt; 2004-04-04 04:30:00-05:00
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -14190,7 +14101,7 @@ Imaginary: False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># tz.tzutc() is equivalent to pytz.UTC or timezone.utc</span>
@@ -14233,7 +14144,7 @@ Imaginary: False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">JST</span> <span class="o">=</span> <span class="n">tzoffset</span><span class="p">(</span><span class="s1">&#39;JST&#39;</span><span class="p">,</span> <span class="mi">32400</span><span class="p">)</span>                       <span class="c1"># Japan Standard Time is year round</span>
@@ -14294,7 +14205,7 @@ Imaginary: False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">timezone</span>
@@ -14328,7 +14239,7 @@ Imaginary: False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
+<div class="prompt input_prompt">In&nbsp;[68]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">JST</span> <span class="o">=</span> <span class="n">timezone</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">9</span><span class="p">),</span> <span class="s1">&#39;JST&#39;</span><span class="p">)</span>          <span class="c1"># Japan Standard Time is year round</span>
@@ -14391,7 +14302,7 @@ Imaginary: False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
+<div class="prompt input_prompt">In&nbsp;[69]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Temporarily changes the TZ file on *nix systems.</span>
@@ -14426,7 +14337,7 @@ Imaginary: False
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[70]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">TZEnvContext</span><span class="p">(</span><span class="s1">&#39;UTC&#39;</span><span class="p">):</span>
@@ -14459,7 +14370,7 @@ Imaginary: False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">TZEnvContext</span><span class="p">(</span><span class="s1">&#39;PST8PDT&#39;</span><span class="p">):</span>
@@ -14504,6 +14415,14 @@ Imaginary: False
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>tz.win.tzwinlocal()</code> directly queries the Windows registry for its time zone data and uses that to construct a <code>tzinfo</code>.</p>
 <p>Fixes this bug:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 
 <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">tz</span><span class="o">.</span><span class="n">tzlocal</span><span class="p">())</span><span class="o">.</span><span class="n">tzname</span><span class="p">())</span>
@@ -14544,7 +14463,7 @@ Imaginary: False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">NYC</span> <span class="o">=</span> <span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;America/New_York&#39;</span><span class="p">)</span>
@@ -14561,7 +14480,7 @@ Imaginary: False
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[67]:</div>
+<div class="prompt output_prompt">Out[72]:</div>
 
 
 
@@ -14587,7 +14506,7 @@ Imaginary: False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_tzinfo</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">NYC</span><span class="p">))</span>      <span class="c1"># Eastern Daylight Time</span>
@@ -14619,7 +14538,7 @@ Imaginary: False
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_tzinfo</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1944</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">NYC</span><span class="p">))</span>    <span class="c1"># Eastern War Time</span>
@@ -14651,7 +14570,7 @@ Imaginary: False
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_tzinfo</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1901</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">NYC</span><span class="p">))</span>     <span class="c1"># Local solar mean</span>
@@ -14693,14 +14612,14 @@ Imaginary: False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The most general way to get a time zone is to pass the relevant timezone string to the gettz() function, which will try parsing it a number of different ways until it finds a relevant string.</p>
+<p>The best way to get a time zone is to pass the relevant timezone string to the <code>gettz()</code> function, which is intended to be a Python equivalent to the <code>TZ</code> environment variable.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">()</span>      <span class="c1"># Passing nothing gives you local time</span>
@@ -14716,7 +14635,7 @@ Imaginary: False
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[71]:</div>
+<div class="prompt output_prompt">Out[76]:</div>
 
 
 
@@ -14733,74 +14652,7 @@ Imaginary: False
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If your TZSTR is an an Olson file, it is prioritized over the /etc/localtime tzfile.</span>
-<span class="k">with</span> <span class="n">TZEnvContext</span><span class="p">(</span><span class="s1">&#39;CST6CDT&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">gettz</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>tzfile(&#39;/usr/share/zoneinfo/CST6CDT&#39;)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If it doesn&#39;t find a tzfile, but it finds a valid abbreviation for the local zone,</span>
-<span class="c1"># it returns tzlocal()</span>
-<span class="k">with</span> <span class="n">TZEnvContext</span><span class="p">(</span><span class="s1">&#39;LMT4&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;LMT&#39;</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>tzlocal()
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[82]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Retrieve IANA zone:</span>
@@ -14832,7 +14684,57 @@ Imaginary: False
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If it finds a valid abbreviation for the local zone, returns tzlocal()</span>
+<span class="k">with</span> <span class="n">TZEnvContext</span><span class="p">(</span><span class="s1">&#39;LMT4&#39;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;LMT&#39;</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>tzlocal()
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="tz.gettz()"><code>tz.gettz()</code><a class="anchor-link" href="#tz.gettz()">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>It can parse more exotic zones like this GNU <code>TZ</code> string specification:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[85]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Directly parse a TZ variable:</span>
@@ -14861,56 +14763,136 @@ Imaginary: False
 </div>
 </div>
 
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Final-remarks">Final remarks<a class="anchor-link" href="#Final-remarks">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Using-UTC">Using UTC<a class="anchor-link" href="#Using-UTC">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>For events in the past (e.g. logging), store in UTC, convert to local before a user sees it.</li>
-<li>For events in the <em>future</em> (e.g. appointments), store at least the civil time.</li>
-</ul>
-
-</div>
-</div>
 </div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Naive-datetimes">Naive datetimes<a class="anchor-link" href="#Naive-datetimes">&#182;</a></h3><ul>
-<li>Naive datetimes represent a civil time unmoored from an absolute time.</li>
-<li>Sometimes they <em>are</em> what you need.</li>
-<li>Often it is easiest to leave your datetimes naive until some property of the timezone is needed.</li>
-</ul>
+<p>And on Windows it will also accept Windows-style time zone names:</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;Eastern Standard Time&#39;</span><span class="p">)</span>
+<span class="n">tzwin</span><span class="p">(</span><span class="s1">&#39;Eastern Standard Time&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="tz.gettz()"><code>tz.gettz()</code><a class="anchor-link" href="#tz.gettz()">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>gettz</code> will return the same time zone object for the same input string, unless the cache is bypassed:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;America/New_York&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;America/New_York&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[87]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can clear the cache with <code>tz.gettz.cache_clear()</code>, or get a fresh instance with <code>tz.gettz.nocache</code>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;Europe/London&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="o">.</span><span class="n">nocache</span><span class="p">(</span><span class="s1">&#39;Europe/London&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[90]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>False</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Plug">Plug<a class="anchor-link" href="#Plug">&#182;</a></h2><ol>
-<li>If you're interested in helping out with dateutil development, check out the issues on the github or e-mail me.</li>
-<li>If you want to cross-sign PGP keys with me, please come talk to me and I will show you my ID.</li>
-</ol>
+<h2 id="Timezone-Tips">Timezone Tips<a class="anchor-link" href="#Timezone-Tips">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Civil-time-vs.-Timestamp">Civil time vs. Timestamp<a class="anchor-link" href="#Civil-time-vs.-Timestamp">&#182;</a></h3><ul>
+<li>Civil times are "wall times" - use this when it matters what the clock on the wall says (e.g. meetings, television shows)</li>
+<li>Timestamps are specific moments in time: use this when it matters what order things happened in or the duration between two events (e.g. logging, astronomical events)</li>
+</ul>
+<p>Store civil times as naive portion + time zone serialization (e.g. <code>America/New_York</code>). Store timestamps in UTC or equivalent.</p>
 
 </div>
 </div>
@@ -14919,16 +14901,34 @@ Imaginary: False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Open-Issues---https://github.com/dateutil/dateutil">Open Issues - <a href="https://github.com/dateutil/dateutil">https://github.com/dateutil/dateutil</a><a class="anchor-link" href="#Open-Issues---https://github.com/dateutil/dateutil">&#182;</a></h3><ul>
+<h3 id="IANA-and-CDR">IANA and CDR<a class="anchor-link" href="#IANA-and-CDR">&#182;</a></h3><ul>
+<li>Never rely on a 3-letter abbreviation.</li>
+<li>IANA keys are lookups in the tz database</li>
+<li>Use Unicode CLDR (Common Locale Data Repository) to get display names for time zones</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Plug">Plug<a class="anchor-link" href="#Plug">&#182;</a></h2><h3>Me</h3><center> <b>@pganssle</b> / <a href="https://ganssle.io">https://ganssle.io</a> / <a href="https://blog.ganssle.io">https://blog.ganssle.io</a></center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="dateutil">dateutil<a class="anchor-link" href="#dateutil">&#182;</a></h3><p>If you're interested in helping out with dateutil development, check out the issues on the github or e-mail me.</p>
+<h4 id="Open-Issues---https://github.com/dateutil/dateutil---Check-out-the-help-wanted-label!">Open Issues - <a href="https://github.com/dateutil/dateutil">https://github.com/dateutil/dateutil</a> - Check out the <a href="https://github.com/dateutil/dateutil/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22">help wanted</a> label!<a class="anchor-link" href="#Open-Issues---https://github.com/dateutil/dateutil---Check-out-the-help-wanted-label!">&#182;</a></h4><ul>
 <li><a href="https://github.com/dateutil/dateutil/issues/76">(#76) Add ability to get Olson/POSIX name of a timezone)</a></li>
 <li><a href="https://github.com/dateutil/dateutil/issues/411">(#411) Creating a relativedelta instance with floating point value in integer quantity for months or years</a></li>
-<li><a href="https://github.com/dateutil/dateutil/issues/339">(#339) Add resolve_imaginary function to tz</a></li>
-<li><p><a href="https://github.com/dateutil/dateutil/issues/259">(#259) tzstr not properly detecting invalid strings</a></p>
-</li>
-<li><p><a href="https://github.com/dateutil/dateutil/issues/383">(#383) Add mypy static type hinting</a></p>
-</li>
-<li><a href="https://github.com/dateutil/dateutil/issues/443">(#443) Examples in documentation should be broken up by module</a></li>
-<li><a href="https://github.com/dateutil/dateutil/issues/442">(#442) tzwin module not building on readthedocs</a></li>
+<li><a href="https://github.com/dateutil/dateutil/issues/383">(#383) Add mypy static type hinting</a></li>
+<li><a href="https://github.com/dateutil/dateutil/issues/691">(#691) Add LRU Cache to gettz and factories</a></li>
+<li><a href="https://github.com/dateutil/dateutil/issues/462">(#462) tzfile reader only reads 32-bit zoneinfo files</a></li>
 </ul>
 
 </div>
@@ -14938,13 +14938,9 @@ Imaginary: False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<div style="font-face:32px; text-align: center">Github / Twitter: <b>@pganssle</b></div>
+<h3>Bloomberg</h3><center><b>@TechAtBloomberg</b> - <a href="https://www.techatbloomberg.com">https://www.TechAtBloomberg.com</a></center>
 </div>
 </div>
-</div><div style="font-face: monospace; text-align:center">
-<h4>GPG Key</h4>
-6B49 ACBA DCF6 BD1C A206<br/>
-67AB CD54 FCE3 D964 BEFB
 </div></section></section>
 </div>
 <div class="footer">

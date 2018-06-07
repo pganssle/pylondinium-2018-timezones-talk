@@ -1,4 +1,4 @@
-/**
+
  * A simple theme for reveal.js presentations, similar
  * to the default theme. The accent color is darkblue.
  *
@@ -156,7 +156,7 @@ body {
   margin: 20px auto;
   padding: 5px;
   font-style: italic;
-  background: $bq-background;
+  background: rgba(255, 255, 255, 0.05);
   }
 
 .reveal blockquote p:first-child,
@@ -411,4 +411,14 @@ div.output_subarea {
   max-width: 100%;
 }
 
-.rendered_html
+/* Copy of Jupyter input */
+.rendered_html pre {
+    background-color: #f7f7f7;
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    margin-right: 10%;
+}
+
+.highlight {
+    background: rgba(0, 0, 0, 0);
+}

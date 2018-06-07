@@ -17,13 +17,13 @@ img.sbitem {
 
 <div class="sbcontainer">
     <img src="images/pganssle-logos-rotated.svg"
-         style="width: 1em;"
+         style="width: 1.1em;"
          class="sbitem" />
     <img src="images/ganssleio_rotated.svg"
-         style="width: 1em;"
+         style="width: 1.1em;"
          class="sbitem" />
-    <img src="images/bloomberg-logo-black-rotated.svg"
-         style="width: 3em;
+    <img src="images/bloomberg-logo-black-rotated-nocc0.svg"
+         style="width: 1.8em;
                 margin-bottom: 0.5em;"
         class="sbitem">
 </div>

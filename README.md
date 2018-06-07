@@ -1,7 +1,7 @@
-## Time Zone Troubles: Dealing with Imaginary and Ambiguous Datetimes
+## Working With Time Zones: Everything You Wish You Didn't Need to Know
 
-This is a talk to be presented on August 12, 2017 at [PyBay](pybay.org)
+This is a talk to be presented on 10 June 2018 at [PyLondinium](pylondinium.org) in sunny London, England.
 
-The hosted slides can be found [on Github pages](https://pganssle.github.io/pybay-2017-timezones-talk), or you can build them yourself by running `./make_slides.sh`.
+The hosted slides can be found [on Github pages](https://pganssle.github.io/pylondinium-2018-timezones-talk).
 
-Code is licensed under the MIT license, text is released under CC-0.
+Code is licensed under the Apache 2.0 license, text is released under CC-0.

@@ -1,0 +1,28 @@
+** Opening slide 30s [T: 30s]
+** Introduction [2m, T: 2m30s]
+   - UTC [30s]
+   - Time Zones vs. Offsets [1m30s]
+** Complicated time zones [8m30s, T: 11m]
+   - Non-integer offsets [45s]
+   - Change of DST status without offset change [1m:15s]
+   - Multiple DST transitions per year [1m]
+   - Missing Days / Double Days [2m]
+   - Xinjiang Time [1m]
+   - Why work with time zones? [1m30s]
+** Python's Time Zone Model [1m30s, T: 12m30s]
+** Ambiguous Times 
+   - Ambiguous Times [45s]
+   - PEP-495 [45s]
+** Comparing timezone-aware datetimes [2m45s, T: 15m15s]
+** Imaginary datetimes [2m30s, T: 17m45s] 
+** Working with time zones [3m, T: 20m45s] 
+** Handling ambiguous times [3m30s, T: 23m15s]
+   - Overview [45s]
+   - dateutil.tz.enfold [45s]
+   - dateutil.tz.datetime_ambiguous [2m]
+** Working with imaginary times [1m, T: 24m15s] 
+** Timezone tips [30s, T: 24m45s] 
+ 
+
+
+     

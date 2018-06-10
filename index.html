@@ -11865,8 +11865,8 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="UTC">UTC<a class="anchor-link" href="#UTC">&#182;</a></h2><ul>
-<li>Coordinated Universal Time / Temps Universel Coordonné</li>
-<li>Also called Greenwich Mean Time (GMT)</li>
+<li>Reference time zone</li>
+<li>Monotonic-ish (what's a few leap seconds between friends?)</li>
 </ul>
 
 </div>
@@ -11877,8 +11877,8 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Time-zones-vs.-Offsets">Time zones vs. Offsets<a class="anchor-link" href="#Time-zones-vs.-Offsets">&#182;</a></h3><ul>
-<li><code>UTC-6</code> is an offset</li>
-<li><code>US/Central</code> is a time zone</li>
+<li><code>UTC+1</code> is an offset</li>
+<li><code>Europe/London</code> is a time zone</li>
 </ul>
 
 </div>
@@ -11889,17 +11889,17 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><code>CST</code> is a highly-context-dependent abbreviation:<ul>
-<li>Central Standard Time (<code>UTC-6</code>)</li>
-<li>Cuba Standard Time (<code>UTC-5</code>)</li>
-<li>China Standard Time (<code>UTC+8</code>)</li>
+<li><code>BST</code> is a highly-context-dependent abbreviation:<ul>
+<li>British Summer Time (<code>UTC+1</code>)</li>
+<li>Bangladesh Standard Time (<code>UTC+6</code>)</li>
+<li>Bougainville Standard Time (<code>UTC+11</code>)</li>
 </ul>
 </li>
 </ul>
 
 </div>
 </div>
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12271,7 +12271,7 @@ a.anchor-link {
 <div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_before_utc</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">ET</span><span class="p">())</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">tz</span><span class="o">.</span><span class="n">tzutc</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_before_utc</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">ET</span><span class="p">())</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">tz</span><span class="o">.</span><span class="n">UTC</span><span class="p">)</span>
 <span class="n">dt_during</span> <span class="o">=</span> <span class="p">(</span><span class="n">dt_before_utc</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">ET</span><span class="p">())</span>  <span class="c1"># 1:30 EST</span>
 <span class="n">dt_after</span> <span class="o">=</span> <span class="p">(</span><span class="n">dt_before_utc</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">ET</span><span class="p">())</span>   <span class="c1"># 1:30 EDT</span>
 
@@ -12415,7 +12415,7 @@ a.anchor-link {
 
 </div>
 </div>
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -12907,7 +12907,7 @@ a.anchor-link {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;x (LON):              </span><span class="si">{x}</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;x (UTC):              {x.astimezone(UTC)}&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;x (LON-&gt;UTC-&gt;LON):    {x.astimezone(LON).astimezone(LON)}&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;x (LON-&gt;UTC-&gt;LON):    {x.astimezone(UTC).astimezone(LON)}&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12926,7 +12926,7 @@ a.anchor-link {
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>x (LON):              2007-03-25 01:00:00+01:00
 x (UTC):              2007-03-25 00:00:00+00:00
-x (LON-&gt;UTC-&gt;LON):    2007-03-25 01:00:00+01:00
+x (LON-&gt;UTC-&gt;LON):    2007-03-25 00:00:00+00:00
 </pre>
 </div>
 </div>
@@ -13871,218 +13871,15 @@ z: 2007-03-25 00:00:00+00:00
 </div>
 
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">resolve_imaginary</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>          <span class="c1"># This is a planned feature in dateutil 2.7.0</span>
-    <span class="k">if</span> <span class="n">dt</span><span class="o">.</span><span class="n">tzinfo</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">tz</span><span class="o">.</span><span class="n">datetime_exists</span><span class="p">(</span><span class="n">dt</span><span class="p">):</span>
-        <span class="n">curr_offset</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">utcoffset</span><span class="p">()</span>
-        <span class="n">old_offset</span> <span class="o">=</span> <span class="p">(</span><span class="n">dt</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">24</span><span class="p">))</span><span class="o">.</span><span class="n">utcoffset</span><span class="p">()</span>
-        <span class="n">dt</span> <span class="o">+=</span> <span class="n">curr_offset</span> <span class="o">-</span> <span class="n">old_offset</span>
-    <span class="k">return</span> <span class="n">dt</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">resolve_imaginary</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">NYC</span><span class="p">)))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2004-04-04 03:30:00-04:00
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="pytz"><code>pytz</code><a class="anchor-link" href="#pytz">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>dateutil.tz.datetime_exists()</code>  and <code>dateutil.tz.resolve_imaginary()</code> work with <code>pytz</code> zones, too</p>
+<p>Both of these functions work with <code>pytz</code> time zones as well.</p>
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_pytz_real</span> <span class="o">=</span> <span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
-<span class="n">dt_pytz_imag</span> <span class="o">=</span> <span class="n">NYC_pytz</span><span class="o">.</span><span class="n">localize</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Real:      {tz.datetime_exists(dt_pytz_real)}&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;Imaginary: {tz.datetime_exists(dt_pytz_imag)}&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Real:      True
-Imaginary: False
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[62]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt_pytz_imag}</span><span class="s1"> -&gt; {tz.resolve_imaginary(dt_pytz_imag)}&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2004-04-04 02:30:00-05:00 -&gt; 2004-04-04 02:30:00-05:00
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="pytz"><code>pytz</code><a class="anchor-link" href="#pytz">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>tz.datetime_exists</code> will detect non-normalized <code>datetimes</code>:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[63]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_nn</span> <span class="o">=</span> <span class="n">dt_pytz_real</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>   <span class="c1"># Needs to be normalized to DST</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">dt_nn</span><span class="p">,</span> <span class="s1">&#39;Exists&#39;</span> <span class="k">if</span> <span class="n">tz</span><span class="o">.</span><span class="n">datetime_exists</span><span class="p">(</span><span class="n">dt_nn</span><span class="p">)</span> <span class="k">else</span> <span class="s1">&#39;Imaginary&#39;</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2004-04-04 04:30:00-05:00: Imaginary
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>But <code>resolve_imaginary</code> currently only works for standard imaginary datetimes:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[64]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dt_n</span> <span class="o">=</span> <span class="n">tz</span><span class="o">.</span><span class="n">resolve_imaginary</span><span class="p">(</span><span class="n">dt_nn</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;</span><span class="si">{dt_nn}</span><span class="s1"> -&gt; </span><span class="si">{dt_n}</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2004-04-04 04:30:00-05:00 -&gt; 2004-04-04 04:30:00-05:00
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -14101,11 +13898,11 @@ Imaginary: False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># tz.tzutc() is equivalent to pytz.UTC or timezone.utc</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">tz</span><span class="o">.</span><span class="n">tzutc</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># tz.UTC is equivalent to pytz.UTC or timezone.utc</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">tz</span><span class="o">.</span><span class="n">UTC</span><span class="p">)</span>
 <span class="n">print_tzinfo</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
 </pre></div>
 
@@ -14144,7 +13941,7 @@ Imaginary: False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">JST</span> <span class="o">=</span> <span class="n">tzoffset</span><span class="p">(</span><span class="s1">&#39;JST&#39;</span><span class="p">,</span> <span class="mi">32400</span><span class="p">)</span>                       <span class="c1"># Japan Standard Time is year round</span>
@@ -14190,262 +13987,6 @@ Imaginary: False
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="UTC-and-Static-time-zones">UTC and Static time zones<a class="anchor-link" href="#UTC-and-Static-time-zones">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>In Python 3.2, <code>timezone</code> objects were introduced to provide ready-made <code>tzinfo</code> subclasses for the simple case of static offsets from UTC.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="k">import</span> <span class="n">timezone</span>
-<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">timezone</span><span class="o">.</span><span class="n">utc</span><span class="p">)</span>     <span class="c1"># Equivalent to pytz.UTC or dateutil.tz.UTC</span>
-<span class="n">print_tzinfo</span><span class="p">(</span><span class="n">dt</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2014-12-19 22:30:00+0000
-    tzname:   UTC;      UTC Offset:   0.00h;        DST:      None
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">JST</span> <span class="o">=</span> <span class="n">timezone</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">9</span><span class="p">),</span> <span class="s1">&#39;JST&#39;</span><span class="p">)</span>          <span class="c1"># Japan Standard Time is year round</span>
-<span class="n">IST</span> <span class="o">=</span> <span class="n">timezone</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">minutes</span><span class="o">=</span><span class="mi">30</span><span class="p">),</span>     <span class="c1"># India Standard Time is year round</span>
-               <span class="s1">&#39;IST&#39;</span><span class="p">)</span>  
-<span class="n">EST</span> <span class="o">=</span> <span class="n">timezone</span><span class="p">(</span><span class="n">timedelta</span><span class="p">(</span><span class="n">hours</span><span class="o">=-</span><span class="mi">5</span><span class="p">))</span>                <span class="c1"># Without a name, it&#39;s UTC-hh:mm</span>
-
-<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">tz</span><span class="o">.</span><span class="n">UTC</span><span class="p">)</span>
-<span class="n">print_tzinfo</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">JST</span><span class="p">));</span> <span class="nb">print</span><span class="p">()</span>
-<span class="n">print_tzinfo</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">IST</span><span class="p">));</span> <span class="nb">print</span><span class="p">()</span>
-<span class="n">print_tzinfo</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">EST</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2016-07-17 21:15:00+0900
-    tzname:   JST;      UTC Offset:   9.00h;        DST:      None
-
-2016-07-17 17:45:00+0530
-    tzname:   IST;      UTC Offset:   5.50h;        DST:      None
-
-2016-07-17 07:15:00-0500
-    tzname: UTC-05:00;  UTC Offset:  -5.00h;        DST:      None
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Local-time">Local time<a class="anchor-link" href="#Local-time">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The <code>tz.tzlocal()</code> class is a <code>tzinfo</code> implementation that uses the OS hooks in Python's <code>time</code>  module to get the local system time.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Temporarily changes the TZ file on *nix systems.</span>
-<span class="kn">from</span> <span class="nn">helper_functions</span> <span class="k">import</span> <span class="n">TZEnvContext</span>
-
-<span class="n">print_tzinfo</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">tz</span><span class="o">.</span><span class="n">tzlocal</span><span class="p">()))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2016-07-17 13:15:00+0100
-    tzname:   BST;      UTC Offset:   1.00h;        DST:      1.0h
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">TZEnvContext</span><span class="p">(</span><span class="s1">&#39;UTC&#39;</span><span class="p">):</span>
-    <span class="n">print_tzinfo</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">tz</span><span class="o">.</span><span class="n">tzlocal</span><span class="p">()))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2016-07-17 12:15:00+0000
-    tzname:   UTC;      UTC Offset:   0.00h;        DST:      0.0h
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">TZEnvContext</span><span class="p">(</span><span class="s1">&#39;PST8PDT&#39;</span><span class="p">):</span>
-    <span class="n">print_tzinfo</span><span class="p">((</span><span class="n">dt</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">180</span><span class="p">))</span><span class="o">.</span><span class="n">astimezone</span><span class="p">(</span><span class="n">tz</span><span class="o">.</span><span class="n">tzlocal</span><span class="p">()))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>2017-01-13 04:15:00-0800
-    tzname:   PST;      UTC Offset:  -8.00h;        DST:      0.0h
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Local-time:-Windows">Local time: Windows<a class="anchor-link" href="#Local-time:-Windows">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>tz.win.tzwinlocal()</code> directly queries the Windows registry for its time zone data and uses that to construct a <code>tzinfo</code>.</p>
-<p>Fixes this bug:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2014</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">tz</span><span class="o">.</span><span class="n">tzlocal</span><span class="p">())</span><span class="o">.</span><span class="n">tzname</span><span class="p">())</span>
-<span class="n">Eastern</span> <span class="n">Standard</span> <span class="n">Time</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">tz</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">tzwinlocal</span><span class="p">())</span><span class="o">.</span><span class="n">tzname</span><span class="p">())</span>
-<span class="n">Eastern</span> <span class="n">Standard</span> <span class="n">Time</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="k">with</span> <span class="n">TZWinContext</span><span class="p">(</span><span class="s1">&#39;Pacific Standard Time&#39;</span><span class="p">):</span>
-<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">tz</span><span class="o">.</span><span class="n">tzlocal</span><span class="p">())</span><span class="o">.</span><span class="n">tzname</span><span class="p">())</span>
-<span class="o">...</span>     <span class="k">print</span><span class="p">(</span><span class="n">dt</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">tz</span><span class="o">.</span><span class="n">win</span><span class="o">.</span><span class="n">tzwinlocal</span><span class="p">())</span><span class="o">.</span><span class="n">tzname</span><span class="p">())</span>
-
-<span class="n">Eastern</span> <span class="n">Standard</span> <span class="n">Time</span>
-<span class="n">Pacific</span> <span class="n">Standard</span> <span class="n">Time</span>
-</pre></div>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="IANA-(Olson)-database">IANA (Olson) database<a class="anchor-link" href="#IANA-(Olson)-database">&#182;</a></h2>
 </div>
 </div>
@@ -14463,7 +14004,7 @@ Imaginary: False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[71]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">NYC</span> <span class="o">=</span> <span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;America/New_York&#39;</span><span class="p">)</span>
@@ -14480,7 +14021,7 @@ Imaginary: False
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[72]:</div>
+<div class="prompt output_prompt">Out[71]:</div>
 
 
 
@@ -14506,7 +14047,7 @@ Imaginary: False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[72]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_tzinfo</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">NYC</span><span class="p">))</span>      <span class="c1"># Eastern Daylight Time</span>
@@ -14538,7 +14079,7 @@ Imaginary: False
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[73]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_tzinfo</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1944</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">NYC</span><span class="p">))</span>    <span class="c1"># Eastern War Time</span>
@@ -14570,7 +14111,7 @@ Imaginary: False
 </div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[74]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">print_tzinfo</span><span class="p">(</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1901</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="n">tzinfo</span><span class="o">=</span><span class="n">NYC</span><span class="p">))</span>     <span class="c1"># Local solar mean</span>
@@ -14619,7 +14160,7 @@ Imaginary: False
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[75]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">()</span>      <span class="c1"># Passing nothing gives you local time</span>
@@ -14635,7 +14176,7 @@ Imaginary: False
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[76]:</div>
+<div class="prompt output_prompt">Out[75]:</div>
 
 
 
@@ -14652,39 +14193,7 @@ Imaginary: False
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[82]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Retrieve IANA zone:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;Pacific/Kiritimati&#39;</span><span class="p">))</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>tzfile(&#39;/usr/share/zoneinfo/Pacific/Kiritimati&#39;)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div></div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="prompt input_prompt">In&nbsp;[77]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># If it finds a valid abbreviation for the local zone, returns tzlocal()</span>
@@ -14714,31 +14223,14 @@ Imaginary: False
 </div>
 </div>
 
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="tz.gettz()"><code>tz.gettz()</code><a class="anchor-link" href="#tz.gettz()">&#182;</a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>It can parse more exotic zones like this GNU <code>TZ</code> string specification:</p>
-
-</div>
-</div>
-</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[85]:</div>
+<div class="prompt input_prompt">In&nbsp;[76]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Directly parse a TZ variable:</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;AEST-10AEDT-11,M10.1.0/2,M4.1.0/3&#39;</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Retrieve IANA zone:</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;Pacific/Kiritimati&#39;</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -14755,121 +14247,9 @@ Imaginary: False
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>tzstr(&#39;AEST-10AEDT-11,M10.1.0/2,M4.1.0/3&#39;)
+<pre>tzfile(&#39;/usr/share/zoneinfo/Pacific/Kiritimati&#39;)
 </pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>And on Windows it will also accept Windows-style time zone names:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;Eastern Standard Time&#39;</span><span class="p">)</span>
-<span class="n">tzwin</span><span class="p">(</span><span class="s1">&#39;Eastern Standard Time&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="tz.gettz()"><code>tz.gettz()</code><a class="anchor-link" href="#tz.gettz()">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>gettz</code> will return the same time zone object for the same input string, unless the cache is bypassed:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[87]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;America/New_York&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;America/New_York&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[87]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>True</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>You can clear the cache with <code>tz.gettz.cache_clear()</code>, or get a fresh instance with <code>tz.gettz.nocache</code>:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;Europe/London&#39;</span><span class="p">)</span> <span class="ow">is</span> <span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="o">.</span><span class="n">nocache</span><span class="p">(</span><span class="s1">&#39;Europe/London&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[90]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>False</pre>
-</div>
-
 </div>
 
 </div>
